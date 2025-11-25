@@ -205,3 +205,42 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ML-IDS Specific
+# Data directories
+data/raw/*
+data/processed/*
+data/features/*
+data/tableau_exports/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/features/.gitkeep
+!data/tableau_exports/.gitkeep
+
+# Trained models
+models/*.h5
+models/*.keras
+models/*.pkl
+models/*.joblib
+!models/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Tableau files
+*.twb
+*.twbx
+*.tds
+*.tdsx
+*.hyper
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter notebooks (optional - uncomment if you want to ignore)
+# *.ipynb
