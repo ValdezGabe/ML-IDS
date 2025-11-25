@@ -173,6 +173,10 @@ class FeatureExtractor:
         Returns:
             Scaled features as numpy array
         """
+        # Fill any remaining NaN values before scaling
+        X = X.fillna(0)
+        X = X.replace([np.inf, -np.inf], 0)
+
         if fit:
             if scaler_type == 'standard':
                 self.scaler = StandardScaler()
@@ -187,6 +191,9 @@ class FeatureExtractor:
             if self.scaler is None:
                 raise ValueError("Scaler not fitted. Call with fit=True first.")
             X_scaled = self.scaler.transform(X)
+
+        # Final check for NaN values
+        X_scaled = np.nan_to_num(X_scaled, nan=0.0, posinf=0.0, neginf=0.0)
 
         return X_scaled
 

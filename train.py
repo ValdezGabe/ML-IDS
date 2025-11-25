@@ -74,6 +74,10 @@ def load_and_preprocess_data(dataset_type='training', sample_size=None):
         select_features=False
     )
 
+    # Map attack categories to numeric labels
+    from src.utils.config import Config
+    y = y.map(Config.ATTACK_CATEGORIES)
+
     return X, y, extractor
 
 
