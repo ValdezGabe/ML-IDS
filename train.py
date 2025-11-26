@@ -286,7 +286,48 @@ def main():
     # Save model
     save_model(model, extractor, args)
 
+    # Export to Tableau
+    logger.info("\n" + "="*60)
+    logger.info("Exporting results to Tableau...")
+    logger.info("="*60)
+
+    try:
+        from scripts.export_and_publish import export_and_publish
+
+        # Make predictions on test set
+        predictions = model.predict(X_test)
+        probabilities = model.predict_proba(X_test)
+
+        # Prepare metrics
+        from sklearn.metrics import precision_score, recall_score, f1_score
+        y_pred_classes = predictions
+
+        metrics = {
+            'accuracy': results['test_accuracy'],
+            'precision': precision_score(y_test, y_pred_classes, average='weighted', zero_division=0),
+            'recall': recall_score(y_test, y_pred_classes, average='weighted', zero_division=0),
+            'f1_score': f1_score(y_test, y_pred_classes, average='weighted', zero_division=0),
+            'loss': results['test_loss']
+        }
+
+        # Export and publish to Tableau
+        export_and_publish(
+            predictions=predictions,
+            probabilities=probabilities,
+            metrics=metrics,
+            project_name='ML-IDS'
+        )
+
+        logger.info("✅ Results published to Tableau!")
+        logger.info("View at: https://10ax.online.tableau.com/#/site/argus/projects/ML-IDS")
+
+    except Exception as e:
+        logger.warning(f"Failed to export to Tableau: {e}")
+        logger.info("Model training completed, but Tableau export failed")
+
+    logger.info("\n" + "="*60)
     logger.info("Training pipeline completed successfully!")
+    logger.info("="*60)
 
 
 if __name__ == "__main__":

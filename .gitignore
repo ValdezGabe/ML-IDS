@@ -222,6 +222,7 @@ models/*.h5
 models/*.keras
 models/*.pkl
 models/*.joblib
+models/*_config.json
 !models/.gitkeep
 
 # Logs
