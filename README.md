@@ -12,34 +12,6 @@ An Intrusion Detection System (IDS) that leverages machine learning algorithms t
 - Alert generation system
 - Performance metrics dashboard
 
-## 🎯 Learning Objectives
-
-By completing this project, you will:
-- Understand network security fundamentals and attack patterns
-- Master ML classification techniques for cybersecurity
-- Learn to handle imbalanced datasets
-- Develop skills in feature engineering for network data
-- Implement real-time detection systems
-- Practice model evaluation and optimization
-
-## 📚 Required Reading & Resources
-
-### Essential Papers
-1. **"A Survey of Data Mining and Machine Learning Methods for Cyber Security Intrusion Detection"** - Buczak & Guven (2016)
-   - Foundation for understanding ML in IDS
-
-2. **"Machine Learning for Encrypted Traffic Classification"** - Velan et al. (2015)
-   - Techniques for analyzing network traffic
-
-3. **"Deep Learning Approach for Network Intrusion Detection System"** - Vinayakumar et al. (2019)
-   - Advanced neural network approaches
-
-### Documentation & Tutorials
-- **Scikit-learn Documentation**: [Classification algorithms](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning)
-- **Network Traffic Analysis**: [Wireshark User Guide](https://www.wireshark.org/docs/wsug_html/)
-- **Python Scapy Library**: [Packet manipulation](https://scapy.readthedocs.io/)
-- **NIST Cybersecurity Framework**: Understanding security contexts
-
 ### Datasets
 1. **NSL-KDD Dataset** (Recommended for beginners)
    - Improved version of KDD Cup 99
@@ -612,26 +584,9 @@ Extend to classify specific attack types:
 - R2L (Remote to Local)
 - U2R (User to Root)
 
-## 🐛 Common Issues & Solutions
+### 4. Tableau Dashboard
+<img width="1440" height="608" alt="Screenshot 2025-12-10 at 11 51 04 AM" src="https://github.com/user-attachments/assets/1d58c4e0-0e6f-45e9-84f4-07bc2a1a0b83" />
 
-| Issue | Solution |
-|-------|----------|
-| Memory errors with large datasets | Use batch processing or sampling |
-| Class imbalance affecting performance | Apply SMOTE or class weights |
-| Overfitting on training data | Add regularization, dropout, or cross-validation |
-| Slow real-time detection | Optimize feature extraction, use model quantization |
-| High false positive rate | Adjust threshold, ensemble methods |
-
-## 📈 Project Timeline
-
-| Week | Tasks | Deliverable |
-|------|-------|-------------|
-| 1-2 | Data preparation, EDA | Preprocessed dataset, feature analysis |
-| 3-4 | Model development | Trained models, initial results |
-| 5 | Evaluation & optimization | Performance reports, best model selection |
-| 6 | Real-time implementation | Working detector prototype |
-| 7 | Testing & documentation | Test suite, user documentation |
-| 8 | Deployment & presentation | Deployed system, final presentation |
 
 ## 🎓 Skills Developed
 
@@ -641,43 +596,9 @@ Extend to classify specific attack types:
 - **Software Engineering**: Clean code, testing, API development, containerization
 - **Real-time Systems**: Stream processing, performance optimization
 
-## 📖 Additional Resources
-
-### Books
-- "Network Security Through Data Analysis" by Michael Collins
-- "Machine Learning and Security" by Clarence Chio and David Freeman
-- "Hands-On Machine Learning" by Aurélien Géron
-
-### Online Courses
-- [Coursera - Machine Learning for Cybersecurity](https://www.coursera.org/learn/machine-learning-cybersecurity)
-- [edX - Cybersecurity Fundamentals](https://www.edx.org/course/cybersecurity-fundamentals)
-
-### Communities & Forums
-- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/)
-- [SANS ICS Community](https://www.sans.org/community/)
-- [KDD Cup Competition Forums](https://www.kdd.org/)
-
-## 🤝 Contributing
-
-Feel free to contribute to this project by:
-1. Forking the repository
-2. Creating a feature branch (`git checkout -b feature/NewFeature`)
-3. Committing changes (`git commit -m 'Add NewFeature'`)
-4. Pushing to branch (`git push origin feature/NewFeature`)
-5. Opening a Pull Request
 
 ## 📝 License
 
 This project is licensed under the MIT License - see LICENSE file for details.
 
-## 🙏 Acknowledgments
 
-- UCI Machine Learning Repository for datasets
-- Scikit-learn community for excellent documentation
-- Security researchers who maintain public datasets
-
----
-
-**Remember**: This IDS is for educational purposes. For production environments, consider enterprise-grade solutions with regular updates and professional support.
-
-Happy Learning! 🚀🔒
