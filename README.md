@@ -99,7 +99,7 @@ ml-ids/
 
 ## 📝 Implementation Steps
 
-### Phase 1: Data Preparation (Week 1-2)
+### Phase 1: Data Preparation
 
 #### Step 1: Load and Explore Dataset
 ```python
@@ -181,7 +181,7 @@ def balance_dataset(X, y, strategy='hybrid'):
     return X_balanced, y_balanced
 ```
 
-### Phase 2: Model Development (Week 3-4)
+### Phase 2: Model Development
 
 #### Step 4: Implement ML Models
 
@@ -272,7 +272,7 @@ class NeuralNetworkIDS:
         return history
 ```
 
-### Phase 3: Evaluation & Optimization (Week 5)
+### Phase 3: Evaluation & Optimization
 
 #### Step 5: Model Evaluation
 ```python
@@ -345,7 +345,7 @@ class ModelEvaluator:
         return metrics_df
 ```
 
-### Phase 4: Real-time Detection (Week 6)
+### Phase 4: Real-time Detection
 
 #### Step 6: Implement Real-time Detector
 ```python
@@ -584,7 +584,7 @@ Extend to classify specific attack types:
 - R2L (Remote to Local)
 - U2R (User to Root)
 
-### 4. Tableau Dashboard
+## 📊 Tableau Dashboard
 <img width="1440" height="608" alt="Screenshot 2025-12-10 at 11 51 04 AM" src="https://github.com/user-attachments/assets/1d58c4e0-0e6f-45e9-84f4-07bc2a1a0b83" />
 
 
